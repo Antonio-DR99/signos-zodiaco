@@ -1,0 +1,86 @@
+
+body {
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color:#F8F1FF ;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top:50px;
+}
+.intro h1{
+    font-size: 55px;
+}
+
+.intro p{
+    width: 60%;
+    text-align:center;
+    margin-bottom: 50px;
+}
+
+.contenedor1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor1 input[type=text]{
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 15px;
+    border:none;
+    border-bottom: 1px solid;
+    background-color: transparent;
+}
+.contenedor1 input[type=button]{
+    width: 100px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    
+}
+.contenedor1 input[type=button]:hover{
+    background-color: #8E55DD ;
+    font-size: 1.2em;
+}
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contenedor2 h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor2 p{
+    max-width: 600px;
+    font-size: 16px;
+
+}
+
+.contenedor2 img{
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+.descripcion{
+    background-color:#DECDF5;
+    border-radius:10px;
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 400px;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hoja estilo/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Londrina+Sketch&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/icono (2).png" type="image/x-icon">
+    <title>Conexión Zodiacal</title>
+</head>
+<body>
+    <div class="intro">
+        <h1>CONEXIÓN ZODIACAL</h1>
+        <p>¡Bienvenidos a nuestra página web dedicada al fascinante mundo de los horóscopos! Aquí podrás descubrir los secretos que los astros tienen para ti, conocer las características de tu signo zodiacal y cómo influyen en tu vida. Solo tienes que ingresar tu signo zodiacal y te revelaremos lo que los astros te tienen preparado hoy. Ya seas Aries, Tauro o cualquier otro signo, este es tu espacio para conectar con la energía del universo. ¡Explora, descubre y deja que el zodiaco te guíe!</p>
+    </div>
+    <div class="contenedor1">
+        <!--para que el usario escriba el signo zodiacal-->
+        <input type="text" placeholder="Escribe tu signo" id="signo">
+        <!--Ejecuata la funcion cuando se hace clic en buscar-->
+        <input type="button" id="boton" value="BUSCAR" onclick="mostrarsigno();">
+        <!--Se ejecuta la funcion limpiar cuando se hace clic limpiar-->
+        <input type="button" id="boton" value="LIMPIAR" onclick="limpiar();">
+    </div>
+    <!--Cada signo tiene un div con una id unica que esta oculta inicialmente-->
+    <diV class="contenedor2">
+        <div id="aries" class="descripcion" style= "display: none;">
+            <h1>aries</h1>
+            <p>Descripción: Los Aries son conocidos por ser líderes natos, llenos de energía y entusiasmo. Son valientes, aventureros y les encanta tomar la iniciativa en todo lo que hacen. Siempre están dispuestos a enfrentar nuevos desafíos.</p>
+            <img src="img/aries.png">
+        </div>
+        <div id="tauro" class="descripcion" style="display: none;">
+            <h1>Tauro</h1>
+            <p>Descripción: Tauro es un signo de estabilidad y paciencia. Les gusta disfrutar de los placeres simples de la vida, como la comida, el arte y la comodidad. Son leales, confiables y muy persistentes en sus objetivos.</p>
+            <img src="img/tauro.png">
+        </div>
+
+        <div id="geminis" class="descripcion" style="display: none;">
+            <h1>Geminis</h1>
+            <p>Descripción: Los Géminis son curiosos, comunicativos y muy versátiles. Les encanta aprender cosas nuevas y son grandes conversadores. A menudo tienen una naturaleza dual, lo que les permite adaptarse a diferentes situaciones y personas.</p>
+            <img src="img/geminis.png">
+        </div>
+
+        <div id="cancer" class="descripcion" style="display: none;">
+            <h1>Cancer</h1>
+            <p>Descripción: Cáncer es un signo emocional y protector. Son muy intuitivos y se preocupan profundamente por sus seres queridos. Valoran la seguridad y la estabilidad, tanto en sus relaciones como en su entorno.</p>
+            <img src="img/cancer.png">
+        </div>
+        
+        <div id="leo" class="descripcion" style="display: none;">
+            <h1>Leo</h1>
+            <p>Descripción: Leo es un signo lleno de confianza y carisma. Les gusta ser el centro de atención y disfrutan del reconocimiento. Son generosos, creativos y leales, y siempre buscan dejar una huella en el mundo.</p>
+            <img src="img/leo.png">
+        </div>
+        
+        <div id="virgo" class="descripcion" style="display: none;">
+            <h1>Virgo</h1>
+            <p>Descripción: Los Virgo son perfeccionistas y analíticos. Son organizados, detallistas y les encanta resolver problemas. También son muy prácticos y siempre están dispuestos a ayudar a los demás con una actitud humilde.</p>
+            <img src="img/virgo.png">
+        </div>
+
+        <div id="libra" class="descripcion" style="display: none;">
+            <h1>Libra</h1>
+            <p>Descripción: Libra es un signo de equilibrio y armonía. Les gusta rodearse de belleza y buscan justicia en todas las áreas de su vida. Son sociables, diplomáticos y prefieren evitar conflictos, siempre buscando el consenso.</p>
+            <img src="img/libra.png">
+        </div>
+
+        <div id="escorpio" class="descripcion" style="display: none;">
+            <h1>Escorpio</h1>
+            <p>Descripción: Escorpio es intenso y apasionado. Son misteriosos, profundos y les gusta investigar lo oculto. Tienen una gran fuerza emocional y son muy leales, pero también pueden ser celosos y protectores con lo que aman.</p>
+            <img src="img/escorpio.png">
+        </div>
+
+        <div id="sagitario" class="descripcion" style="display: none;">
+            <h1>Sagitario</h1>
+            <p>Descripción: Sagitario es aventurero y filosófico. Les encanta viajar, explorar nuevas ideas y experimentar la libertad. Son optimistas, sinceros y buscan siempre expandir sus horizontes, tanto física como mentalmente.</p>
+            <img src="img/sagitario.png">
+        </div>
+
+        <div id="capricornio" class="descripcion" style="display: none;">
+            <h1>Capricornio</h1>
+            <p>Descripción: Capricornio es un signo ambicioso y disciplinado. Les gusta trabajar duro para alcanzar sus metas y son muy responsables. Valoran la estabilidad y el éxito, y no temen enfrentarse a desafíos a largo plazo.</p>
+            <img src="img/capricornio.png">
+        </div>
+
+        <div id="acuario" class="descripcion" style="display: none;">
+            <h1>Acuario</h1>
+            <p>Descripción: Acuario es innovador y progresista. Son independientes y les gusta pensar de manera diferente. Valoran la libertad y las causas humanitarias, y siempre buscan mejorar el mundo con sus ideas originales.</p>
+            <img src="img/acuario.jpg">
+        </div>
+
+        <div id="piscis" class="descripcion" style="display: none;">
+            <h1>Piscis</h1>
+            <p>Descripción: Piscis es un signo sensible y soñador. Son empáticos y tienen una gran conexión con sus emociones. Les encanta la creatividad, la música y el arte, y a menudo se pierden en su mundo interior de fantasía e intuición.</p>
+            <img src="img/piscis.png">
+        </div>
+
+        <!--Cuando el usario introduzca un signo zodiacal se mostrara este contenedor avisando que este signo no existe-->
+        <div id="nosigno" class="descripcion" style="display: none;">
+            <h1>Error</h1>
+            <p>UPS... Parece que este signo no se corresponde a ningun signo zodiacal vuleve a introducir otro signo :´(</p>
+            <img src="img/error.jpg">
+        </div>
+
+    </diV>
+    <script type="text/javascript">
+        //funcion para mostrar signos del zodiaco caundo el usario hace clic en el boton buscar
+        function mostrarsigno(){
+            //obtiene el varlo ingresado por el usuario y lo convierte a minuscular para evitar errores con mayusculas
+            var signo = document.getElementById('signo').value.toLowerCase(); 
+            //Compara el valor ingresado con los signos del zodiaco
+            switch(signo){
+                case 'aries':
+                    //si el signo es aries se muestra el div correspondiente
+                    document.getElementById('aries').style.display='block';
+                    break; 
+                case 'tauro':
+                    document.getElementById('tauro').style.display='block';
+                    break;
+                case 'geminis': 
+                    document.getElementById('geminis').style.display='block'; 
+                    break;
+                case 'cancer':
+                    document.getElementById('cancer').style.display='block';
+                    break; 
+                case 'leo':
+                    document.getElementById('leo').style.display='block'; 
+                    break;
+                case 'virgo': 
+                    document.getElementById('virgo').style.display='block'; 
+                    break;
+                case 'libra':
+                    document.getElementById('libra').style.display='block'; 
+                    break;
+                case 'escorpio': 
+                    document.getElementById('escorpio').style.display='block'; 
+                    break;
+                case 'sagitario': 
+                    document.getElementById('sagitario').style.display='block'; 
+                    break;
+                case 'capricornio': 
+                    document.getElementById('capricornio').style.display='block'; 
+                    break;
+                case 'acuario': 
+                    document.getElementById('acuario').style.display='block'; 
+                    break;
+                case 'piscis': 
+                    document.getElementById('piscis').style.display='block';
+                    break;
+                default:
+                    //si el signo ingresado no pertenece a ninguno anterior se mostrara el div con el mensaje de error
+                    document.getElementById('nosigno').style.display='block';
+                } 
+        }
+        //funcion para limpiar pantalla cuando se hace clic en el boton limpiar
+        function limpiar(){
+            //limpia el campo de texto donde el usaurio ingreso el signo
+            document.getElementById('signo').value="";
+            //oculta todos los div de signos zodiacales
+            document.getElementById('aries').style.display='none';
+            document.getElementById('tauro').style.display='none';
+            document.getElementById('geminis').style.display='none';
+            document.getElementById('cancer').style.display='none';
+            document.getElementById('leo').style.display='none';
+            document.getElementById('virgo').style.display='none';
+            document.getElementById('libra').style.display='none';
+            document.getElementById('escorpio').style.display='none';
+            document.getElementById('sagitario').style.display='none';
+            document.getElementById('capricornio').style.display='none';
+            document.getElementById('acuario').style.display='none';
+            document.getElementById('piscis').style.display='none';
+            //oculta el div del mensaje de error de signos
+            document.getElementById('nosigno').style.display='none';
+        }
+    </script>
+</body>
+</html>
